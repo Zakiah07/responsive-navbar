@@ -9,6 +9,7 @@ import {
   NavbarLink,
   Logo,
   OpenLinksButton,
+  NavbarLinkExtended,
 } from "../styles/Navbar.style";
 import LogoImg from "../assets/logo.jpg";
 
@@ -22,8 +23,8 @@ function Navbar() {
           <NavbarLinkContainer>
             <NavbarLink to="/">Home</NavbarLink>
             <NavbarLink to="/products">Products</NavbarLink>
-            <NavbarLink to="/contact">About Us</NavbarLink>
-            <NavbarLink to="/about">Contact Us</NavbarLink>
+            <NavbarLink to="/about">About Us</NavbarLink>
+            <NavbarLink to="/contact">Contact Us</NavbarLink>
             <OpenLinksButton
               onClick={() => {
                 setExtendNavbar((curr) => !curr);
@@ -39,10 +40,10 @@ function Navbar() {
       </NavbarInnerContainer>
       {extendNavbar && (
         <NavbarExtendedContainer>
-          <NavbarLink to="/">Home</NavbarLink>
-          <NavbarLink to="/products">Products</NavbarLink>
-          <NavbarLink to="/contact">About Us</NavbarLink>
-          <NavbarLink to="/about">Contact Us</NavbarLink>
+          <NavbarLinkExtended to="/">Home</NavbarLinkExtended>
+          <NavbarLinkExtended to="/products">Products</NavbarLinkExtended>
+          <NavbarLinkExtended to="/about">About Us</NavbarLinkExtended>
+          <NavbarLinkExtended to="/contact">Contact Us</NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>
